@@ -1,16 +1,16 @@
 <?php
 
+include 'curler.php';
 /**
  *
  */
 class Main
 {
 
-  function __construct(argument)
+  function __construct()
   {
     # code...
   }
 }
-
 
  ?>

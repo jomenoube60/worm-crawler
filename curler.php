@@ -7,17 +7,22 @@ class Curler
 {
   private $file; # the raw file
 
-  function __construct($file_input) # take an URL
+  function __construct($file_input) # fetch an URL
   {
 
-    private $file = $file_input;
+    $this->file = $file_input;
 
   }
 
   function getOutput() # render a text file
   {
-    $input = curl_init($this->file);
-    $output = curl_exec($input);
+    $ch = curl_init();
+    curl_setopt($ch , CURLOPT_URL , $this->file);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $output = curl_exec($ch);
+
+    curl_close($ch);
+
 
     return $output;
   }
