@@ -7,7 +7,7 @@ class Curler
 {
   private $file; # the raw file
 
-  function __construct($file_input) # fetch an URL
+  function setFile($file_input) # fetch an URL
   {
 
     $this->file = $file_input;
