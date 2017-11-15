@@ -9,7 +9,7 @@ class HtmlParser
 
   public function setInput($input)
   {
-
+    $this->html = $input;
   }
 
   public function getInput($input)
