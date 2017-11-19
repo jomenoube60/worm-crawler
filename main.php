@@ -1,15 +1,22 @@
 <?php
 
 include 'curler.php';
+include 'parser.php';
 /**
  *
  */
-class Main
+class Worm
 {
+
+  public $curl;
+
+  public $parser;
 
   function __construct()
   {
-    # code...
+  $this->curl = New Curler;
+
+  $this->parser = New HtmlParser;
   }
 }
 
