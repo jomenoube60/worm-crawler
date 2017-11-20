@@ -7,14 +7,21 @@ class Curler
 {
   private $file; # the raw file
 
-  function setFile($file_input) # fetch an URL
+  public function getFile()
+  {
+
+    return $this->file;
+
+  }
+
+  public function setFile($file_input)
   {
 
     $this->file = $file_input;
 
   }
 
-  function getOutput() # render a text file
+  public function getOutput() # render a text file
   {
     $ch = curl_init();
     curl_setopt($ch , CURLOPT_URL , $this->file);
