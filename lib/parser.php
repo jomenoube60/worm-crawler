@@ -32,9 +32,8 @@ class HtmlParser
   public function parseElement() # parse the content to retrieve the researched element
   {
 
-    $regex = "/".$this->element[0]."(.*)".$this->element[1]."/";
-    echo $this->element[0]." ".$this->element[1];
-    $output = preg_match_all($regex , $this->html , $d);
+    $regex = "%".$this->element[0]."(.*)".$this->element[1]."%";
+    $output = preg_match($regex , $this->html , $d);
     $this->element = $d;
   }
 }

@@ -24,6 +24,7 @@ class Worm
     $this->parser->setElement($open , $close);
     $this->parser->parseElement();
 
+    print_r($this->parser->getElement());
     return $this->parser->getElement();
   }
 }
